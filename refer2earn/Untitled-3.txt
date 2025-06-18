@@ -1,0 +1,276 @@
+REFER2EARN/
+├── index.html           (<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>REFER2EARN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>REFER2EARN</h1>
+    <p class="tagline">Refer friends. Earn rewards. Simple and fast!</p>
+  </header>
+  <main>
+    <img src="your-image.jpg" alt="Enticing visual" class="hero-img">
+    <a href="signup.html" class="btn">Get Started</a>
+    <a href="about.html" class="link">Learn More</a>
+    <a href="login.html" class="link">Login</a>
+  </main>
+</body>
+</html>)
+├── signup.html          (Sign Up page)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - REFER2EARN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h2>Create Your Account</h2>
+    <form id="signupForm">
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
+├── login.html           (Login page)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - REFER2EARN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h2>Login to Your Account</h2>
+    <form id="loginForm">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
+├── dashboard.html       (User Dashboard)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - REFER2EARN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h2>Welcome, <span id="username">User</span>!</h2>
+    <section>
+      <h3>Your Referral Link</h3>
+      <input type="text" id="referralLink" readonly value="https://refer2earn.com/signup?ref=YOURCODE">
+      <button id="copyLinkBtn">Copy Link</button>
+      <button id="shareLinkBtn">Share Link</button>
+    </section>
+    <section>
+      <h3>Referral Stats</h3>
+      <p>Successful Referrals: <span id="referralCount">0</span></p>
+      <ul id="referredUsers">
+        <!-- List of referred users will appear here -->
+      </ul>
+      <div id="rewardSection">
+        <p>You need <span id="referralsNeeded">3</span> more referrals to claim your reward.</p>
+        <button id="claimRewardBtn" disabled>Claim Reward</button>
+      </div>
+    </section>
+    <section>
+      <h3>Account Details</h3>
+      <p>Email: <span id="userEmail"></span></p>
+      <p>Username: <span id="userUsername"></span></p>
+    </section>
+    <button id="logoutBtn">Log Out</button>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
+├── about.html           (About/FAQ page)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - REFER2EARN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h2>About REFER2EARN</h2>
+    <p>REFER2EARN is a platform that rewards you for inviting others.<br>
+    Simply sign up, share your referral link, and earn rewards when your friends join!</p>
+    <h3>Frequently Asked Questions</h3>
+    <ul>
+      <li><strong>Is REFER2EARN free?</strong> Yes, it’s completely free to join and participate.</li>
+      <li><strong>How do I refer someone?</strong> Share your unique referral link found in your dashboard.</li>
+      <li><strong>When do I get my reward?</strong> Once you have 3 successful referrals, you can claim your reward.</li>
+    </ul>
+    <a href="index.html" class="btn">Back to Home</a>
+  </main>
+</body>
+</html>
+├── confirm.html         (Confirmation page)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmation - REFER2EARN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h2>Sign up successful!</h2>
+    <p>Redirecting to your dashboard...</p>
+    <a href="dashboard.html" class="btn">Go to Dashboard Now</a>
+  </main>
+  <script>
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 2000);
+  </script>
+</body>
+</html>
+├── css/
+│   └── style.css        (Main stylesheet)
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+header, main {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+h1, h2, h3 {
+  color: #1a237e;
+}
+.btn {
+  display: inline-block;
+  background: #1a237e;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 12px 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.link {
+  margin-left: 10px;
+  color: #3949ab;
+  text-decoration: underline;
+  cursor: pointer;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.hero-img {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+ul {
+  padding-left: 20px;
+}
+#rewardSection {
+  margin-top: 20px;
+}
+└── js/
+    └── main.js          (Main JavaScript)
+    // Placeholder for form handling and dashboard logic
+
+// Example: Handle sign up form submission
+const signupForm = document.getElementById('signupForm');
+if (signupForm) {
+  signupForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Save user data to localStorage (for demo purposes)
+    const email = signupForm.elements[0].value;
+    const username = signupForm.elements[1].value;
+    const password = signupForm.elements[2].value;
+    localStorage.setItem('refer2earn_user', JSON.stringify({ email, username, password, referrals: 0, referred: [] }));
+    window.location.href = 'confirm.html';
+  });
+}
+
+// Example: Handle login form submission
+const loginForm = document.getElementById('loginForm');
+if (loginForm) {
+  loginForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = loginForm.elements[0].value;
+    const password = loginForm.elements[1].value;
+    const user = JSON.parse(localStorage.getItem('refer2earn_user') || '{}');
+    if (user.email === email && user.password === password) {
+      window.location.href = 'confirm.html';
+    } else {
+      alert('Invalid credentials');
+    }
+  });
+}
+
+// Example: Populate dashboard
+if (window.location.pathname.includes('dashboard.html')) {
+  const user = JSON.parse(localStorage.getItem('refer2earn_user') || '{}');
+  document.getElementById('username').textContent = user.username || 'User';
+  document.getElementById('userEmail').textContent = user.email || '';
+  document.getElementById('userUsername').textContent = user.username || '';
+  document.getElementById('referralLink').value = `${window.location.origin}/signup.html?ref=${user.username || 'yourcode'}`;
+  document.getElementById('referralCount').textContent = user.referrals || 0;
+  document.getElementById('referralsNeeded').textContent = Math.max(3 - (user.referrals || 0), 0);
+  document.getElementById('claimRewardBtn').disabled = (user.referrals || 0) < 3;
+
+  // Copy referral link
+  document.getElementById('copyLinkBtn').onclick = function() {
+    document.getElementById('referralLink').select();
+    document.execCommand('copy');
+    alert('Referral link copied!');
+  };
+
+  // Share referral link (Web Share API)
+  document.getElementById('shareLinkBtn').onclick = function() {
+    const link = document.getElementById('referralLink').value;
+    if (navigator.share) {
+      navigator.share({ title: 'Join REFER2EARN', url: link });
+    } else {
+      alert('Sharing not supported on this browser.');
+    }
+  };
+
+  // Log out
+  document.getElementById('logoutBtn').onclick = function() {
+    localStorage.removeItem('refer2earn_user');
+    window.location.href = 'index.html';
+  };
+}

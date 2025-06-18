@@ -1,0 +1,30 @@
+{
+  "name": "REFER2EARN",
+  "version": "1.0.0",
+  "description": "A referral-based rewards application that allows users to sign up, manage their accounts, and track referrals.",
+  "main": "src/App.tsx",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "referral",
+    "rewards",
+    "signup",
+    "account management"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2",
+    "react-scripts": "4.0.3"
+  }
+}
